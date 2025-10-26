@@ -3,6 +3,7 @@ import { isAuth } from "../middlewares/authMiddleware.js";
 import { get } from "mongoose";
 import { getErrorMessage } from "../utils/errorUtils.js";
 import { mythService } from "../services/index.js";
+import { render } from "express/lib/response.js";
 
 const mythController = Router();
 
@@ -103,19 +104,37 @@ mythController.get('/:mythId/delete', isAuth, async (req, res) => {
 });
 
 //report
-mythController.get('/myth/report', async (req, res) => {
-    const mythId = req.params.mythId;
-    const userId = req.user._id;
+mythController.get('/myths/report', async (req, res) => {
+  try {
+    const myths = await mythService.getLatestWithOwner();
 
-    const myth = await mythService.getLatestReport();
-    const isOwner = myth.owner.equals(userId);
-  
-    // const likedList = myth.likedList.map(d=>d.email).join(', ');
-    // const islikedList = myth.likedList.some(d=>d.equals(userId));
+    if (myths.length === 0) {
+      return res.status(200).json({ message: 'There are no myths and legends!', myths: [] });
+    }
 
-    res.render('myths/details', { myth, isOwner});//, likedList, islikedList });
-    res.json({});
+    // Format createdAt to DD/MM/YYYY
+    const formatted = myths.map(m => ({
+      name: m.name,
+      origin: m.origin,
+      role: m.role,
+      symbol: m.symbol,
+      era: m.era,
+      image: m.imageUrl,
+      ownerEmail: m.owner.email,
+      createdAt: new Date(m.createdAt).toLocaleDateString('en-GB'), // DD/MM/YYYY
+    }));
+
+    res.status(200).render('myths/report', { myths: formatted }).json({ myths: formatted });
+
+  } catch (err) {
+    console.error('Error loading report:', err);
+    res.status(500).redirect('/').json({ message: 'Error loading report!' });
+  }
 });
+
+//     res.render('myths/details', { myth, isOwner});//, likedList, islikedList });
+//     res.json({});
+// });
 
 
 export default mythController;

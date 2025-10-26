@@ -116,11 +116,11 @@
  - [x] Add error handling
 
 ### Myth Dashboard Page
- - [ ] Fix  navigation link
- - [ ] Add dashboard view
- - [ ] Add get dashboard action with static Myths
- - [ ] Get all Myths service
- - [ ] Show dynamic Myths  
+ - [x] Fix  navigation link
+ - [x] Add dashboard view
+ - [x] Add get dashboard action with static Myths
+ - [x] Get all Myths service
+ - [x] Show dynamic Myths  
 ### Home page Myths
  - [ ] Add get latest Myths in Myth service
  - [ ] Show dynamic lastest Myths on home 

@@ -101,63 +101,63 @@
 
 ## Solve Myth&Legends
 
-### Create animal Page
- - [x] Fix create animal navigation link
- - [x] Add animal controller
+### Create Myth Page
+ - [x] Fix create Myth navigation link
+ - [x] Add Myth controller
  - [x] Add controller to routes
  - [x] Add create action with render
- - [x] Add animals folder in views
- - [x] Add create animal view
- - [x] Add animal model
- - [x] Modify create animal form
- - [x] Create animal post action
- - [x] Create animal service with create method
- - [x] Add owner on animal creation
+ - [x] Add Myths folder in views
+ - [x] Add create Myth view
+ - [x] Add Myth model
+ - [x] Modify create Myth form
+ - [x] Create Myth post action
+ - [x] Create Myth service with create method
+ - [x] Add owner on Myth creation
  - [x] Add error handling
 
-### Animal Dashboard Page
+### Myth Dashboard Page
  - [x] Fix navigation link
  - [x] Add dashboard view
- - [x] Add get dashboard action with static animals
- - [x] Get all animals service
- - [x] Show dynamic animals  
-### Home page animals
- - [x] Add get latest animals in animal service
- - [x] Show dynamic lastest animals on home 
-###  Animal details
- - [x] Fix details link in animals page
+ - [x] Add get dashboard action with static Myths
+ - [x] Get all Myths service
+ - [x] Show dynamic Myths  
+### Home page Myths
+ - [x] Add get latest Myths in Myth service
+ - [x] Show dynamic lastest Myths on home 
+###  Myth details
+ - [x] Fix details link in Myths page
  - [x] Fix details link in home page
  - [x] Show static details page
- - [x] Add getOne method in animal service
+ - [x] Add getOne method in Myth service
  - [x] Show dynamic details page (without author and donationers)
  - [x] Hide buttons if not logged
  - [x] Show edit and delete button if author
  - [x] Show donation and already donating buttons if logged
  - [ ] Implement donation functionallity
-   - [ ] Add donationers in animal relation
+   - [ ] Add donationers in Myth relation
    - [ ] Add donation action
    - [ ] Add donation service method
    - [ ] Fix donation link
  - [ ] Show dynamic donations
  - [ ] Show donations button or already donating buttons conditionally 
-### Delete animal
+### Delete Myth
  - [x] Fix navigation link in details
  - [x] Add delete action
- - [x] Add delete method in animal service
+ - [x] Add delete method in Myth service
  
-### Edit animal
+### Edit Myth
  - [x] Fix navigation link in details
  - [x] Add get edit action
  - [x] Show empty edit page
- - [x] Populate edit form with animal data
+ - [x] Populate edit form with Myth data
  - [x] Add post edit action
- - [x] Add edit method in animal service
+ - [x] Add edit method in Myth service
  - [x] Add error handling 
 ### Donations
  - [ ] Fix navigation link
  - [ ] Show static donations page
  - [ ] Show dynamic user information
- - [ ] Show created animals
- - [ ] Show donated animals
+ - [ ] Show created Myths
+ - [ ] Show donated Myths
 
 ## Validation and error handling

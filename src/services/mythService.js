@@ -1,7 +1,7 @@
 import Myth from "../models/Myth.js";
 
 export function getAll() {
-    return Myth.find();//.select({name: true, need: true, imageUrl: true, location:true}); //.select({title: true, category: true, imageUrl: true}) is not mandatory or required, just to return only these fields
+    return Myth.find();//.select({name: true, origin: true, imageUrl: true, role:true, symbol:true, era: true}); //.select({title: true, category: true, imageUrl: true}) is not mandatory or required, just to return only these fields
 }
 
 export function getOne(mythId) {
@@ -22,8 +22,12 @@ export function create(mythData, userId) {
     });
 }
 
-export function edit(mythId, mythData){
-    const found = Myth.findByIdAndUpdate(mythId, mythData, {runValidators: true});
+export async function edit(mythId, mythData){
+    console.log(`mythData: ${JSON.stringify(mythData)}`);
+    
+    const found = await Myth.findByIdAndUpdate(mythId, mythData, {runValidators: true});
+    //console.log(found);
+    
     return found;
 }
 

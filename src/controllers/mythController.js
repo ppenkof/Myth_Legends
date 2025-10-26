@@ -53,8 +53,8 @@ mythController.get('/:mythId/details', isAuth, async (req, res) => {
 //Edit get
 mythController.get('/:mythId/edit', isAuth, async (req, res) => {
     const mythId = req.params.mythId;
-    const myth = await  mythService.getOne(mythId);
-
+    const myth = await mythService.getOne(mythId);
+    
     if(!myth.owner.equals(req.user._id)){
         throw {
             message:'Cannot edit myth that you are not owner',
@@ -81,10 +81,12 @@ mythController.post('/:mythId/edit', isAuth, async (req, res) => {
 
     try {
         await mythService.edit(mythId, mythData);
+
         res.redirect(`/myths/${mythId}/details`);
+
     } catch (error) {
-        res.render('myths/edit', {
-         myth:  mythData,
+        res.render(`myths/edit`, {
+        myth:  mythData,
         error: getErrorMessage(error),
         });
     }

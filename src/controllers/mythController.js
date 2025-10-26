@@ -43,9 +43,10 @@ mythController.get('/:mythId/details', isAuth, async (req, res) => {
 
     const myth = await mythService.getOne(mythId);
     const isOwner = myth.owner.equals(userId);
-   
+  
     const likedList = myth.likedList.map(d=>d.email).join(', ');
     const islikedList = myth.likedList.some(d=>d.equals(userId));
+console.log(mythId, userId, isOwner, likedList, islikedList);
 
     res.render('myths/details', { myth, isOwner, likedList, islikedList });
 });

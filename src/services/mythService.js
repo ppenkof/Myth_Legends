@@ -5,7 +5,7 @@ export function getAll() {
 }
 
 export function getOne(mythId) {
-    const found = Myth.findById(mythId).populate(['owner', 'donations']);
+    const found = Myth.findById(mythId).populate(['owner', 'likedList']);
     return found;
 }
 

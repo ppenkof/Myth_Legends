@@ -116,45 +116,45 @@
  - [x] Add error handling
 
 ### Myth Dashboard Page
- - [x] Fix navigation link
- - [x] Add dashboard view
- - [x] Add get dashboard action with static Myths
- - [x] Get all Myths service
- - [x] Show dynamic Myths  
+ - [ ] Fix  navigation link
+ - [ ] Add dashboard view
+ - [ ] Add get dashboard action with static Myths
+ - [ ] Get all Myths service
+ - [ ] Show dynamic Myths  
 ### Home page Myths
- - [x] Add get latest Myths in Myth service
- - [x] Show dynamic lastest Myths on home 
+ - [ ] Add get latest Myths in Myth service
+ - [ ] Show dynamic lastest Myths on home 
 ###  Myth details
- - [x] Fix details link in Myths page
- - [x] Fix details link in home page
- - [x] Show static details page
- - [x] Add getOne method in Myth service
- - [x] Show dynamic details page (without author and donationers)
- - [x] Hide buttons if not logged
- - [x] Show edit and delete button if author
- - [x] Show donation and already donating buttons if logged
+ - [ ] Fi  details link in Myths page
+ - [ ] Fi  details link in home page
+ - [ ] Show static details page
+ - [ ] Add getOne method in Myth service
+ - [ ] Show dynamic details page (without author and donationers)
+ - [ ] Hide buttons if not logged
+ - [ ] Show edit and delete button if author
+ - [ ] Show donation and already donating buttons if logged
  - [ ] Implement donation functionallity
    - [ ] Add donationers in Myth relation
    - [ ] Add donation action
    - [ ] Add donation service method
-   - [ ] Fix donation link
+   - [ ] Fi  donation link
  - [ ] Show dynamic donations
  - [ ] Show donations button or already donating buttons conditionally 
 ### Delete Myth
- - [x] Fix navigation link in details
- - [x] Add delete action
- - [x] Add delete method in Myth service
+ - [ ] Fi  navigation link in details
+ - [ ] Add delete action
+ - [ ] Add delete method in Myth service
  
 ### Edit Myth
- - [x] Fix navigation link in details
- - [x] Add get edit action
- - [x] Show empty edit page
- - [x] Populate edit form with Myth data
- - [x] Add post edit action
- - [x] Add edit method in Myth service
- - [x] Add error handling 
+ - [ ] Fi  navigation link in details
+ - [ ] Add get edit action
+ - [ ] Show empty edit page
+ - [ ] Populate edit form with Myth data
+ - [ ] Add post edit action
+ - [ ] Add edit method in Myth service
+ - [ ] Add error handling 
 ### Donations
- - [ ] Fix navigation link
+ - [ ] Fi  navigation link
  - [ ] Show static donations page
  - [ ] Show dynamic user information
  - [ ] Show created Myths

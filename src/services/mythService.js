@@ -21,3 +21,18 @@ export function create(mythData, userId) {
         owner: userId
     });
 }
+
+export function edit(mythId, mythData){
+    const found = Myth.findByIdAndUpdate(mythId, mythData, {runValidators: true});
+    return found;
+}
+
+export async function remove(mythId, userId) {
+    const myth = await Myth.findById(mythId);
+
+    if(!myth.owner.equals(userId)){
+        throw new Error('You are not the owner of this myth post!');
+    }
+    
+    return Myth.findByIdAndDelete(mythId);
+}

@@ -46,7 +46,6 @@ mythController.get('/:mythId/details', isAuth, async (req, res) => {
   
     const likedList = myth.likedList.map(d=>d.email).join(', ');
     const islikedList = myth.likedList.some(d=>d.equals(userId));
-console.log(mythId, userId, isOwner, likedList, islikedList);
 
     res.render('myths/details', { myth, isOwner, likedList, islikedList });
 });
@@ -102,21 +101,13 @@ mythController.get('/:mythId/delete', isAuth, async (req, res) => {
 });
 
 //report
-mythController.get('/:mythId/report', isAuth, async (req, res) => {
-    const  mythId = req.params.mythId;
-    const userId = req.user._id;
+// mythController.get('/:mythId/report', isAuth, async (req, res) => {
+//     const  mythId = req.params.mythId;
+//     const userId = req.user._id;
 
-    await  mythService.donate( mythId, userId);
-    res.redirect(`/myths/${ mythId}/details`);
-});
+//     await  mythService.report( mythId, userId);
+//     res.redirect(`/myths/${ mythId}/details`);
+// });
 
-//search
-mythController.get('/search', isAuth, async (req, res) => {
-    const filter = req.query;
-    const  myths = await  mythService.search(filter);
-    console.log(filter);
-
-    res.render('search', {  myths, filter, pageTitle: 'Search  myths' });
-});
 
 export default mythController;

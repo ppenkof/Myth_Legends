@@ -15,21 +15,21 @@
         <div class="errorContainer">
             <p>{{error}}</p>
         </div>
-    </div> 
-    {{/if}}
+    </div>
+    {{/if}} 
     <div id="wrapper">
-          <header>
+        <header>
             <!-- Navigation -->
-             <nav>
+            <nav>
                 <div>
                     <a href="/">Home</a>
-                    <a href="/myths/dashboard">Dashboard</a>
-                    <a href="/myths/report">Report</a>
+                    <a href="#">Dashboard</a>
+                    <a href="#">Search</a>
                 </div>
                 {{#if isAuthenticated}}
-                <!--Logged-in users -->
+                <!-- Logged-in users -->
                 <div class="user">
-                    <a href="/myths/create">Add Myth</a>
+                    <a href="#">Add Animal</a>
                     <a href="/users/logout">Logout</a>
                 </div>
                 {{else}}
@@ -42,13 +42,14 @@
             </nav>
         </header>
 
-        {{{body}}}
+       
+            {{{body}}}
 
+
+        <footer>
+            <p>@Friendly World</p>
+        </footer>
     </div>
-    <footer>SoftUni JS Back-End Exam 2025 &copy;</footer>
 </body>
 
 </html>
- 
- 
- 

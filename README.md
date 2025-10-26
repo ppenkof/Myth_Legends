@@ -1,7 +1,3 @@
-# SoftUni JS Back-End Exam Preparation Cheat Sheet
-
-## Create Skeleton Project
-
 ### 1. Initialize Project 
  - [x] Initialize npm project `npm init -y`
  - [x] Change module system
@@ -103,10 +99,65 @@
  - [x] BONUS: Check repeatPassword in model
  - [x] Error handling and data persistance on login 
 
-### Bonus
- - [x] Export helpers into separate module
- - [x] Add env variable for debuging
- - [x] Add global error handler
- - [ ] Add bundler
- - [ ] Use async jwt
- - [ ] Refresh token
+## Solve Myth&Legends
+
+### Create animal Page
+ - [x] Fix create animal navigation link
+ - [x] Add animal controller
+ - [x] Add controller to routes
+ - [x] Add create action with render
+ - [x] Add animals folder in views
+ - [x] Add create animal view
+ - [x] Add animal model
+ - [x] Modify create animal form
+ - [x] Create animal post action
+ - [x] Create animal service with create method
+ - [x] Add owner on animal creation
+ - [x] Add error handling
+
+### Animal Dashboard Page
+ - [x] Fix navigation link
+ - [x] Add dashboard view
+ - [x] Add get dashboard action with static animals
+ - [x] Get all animals service
+ - [x] Show dynamic animals  
+### Home page animals
+ - [x] Add get latest animals in animal service
+ - [x] Show dynamic lastest animals on home 
+###  Animal details
+ - [x] Fix details link in animals page
+ - [x] Fix details link in home page
+ - [x] Show static details page
+ - [x] Add getOne method in animal service
+ - [x] Show dynamic details page (without author and donationers)
+ - [x] Hide buttons if not logged
+ - [x] Show edit and delete button if author
+ - [x] Show donation and already donating buttons if logged
+ - [ ] Implement donation functionallity
+   - [ ] Add donationers in animal relation
+   - [ ] Add donation action
+   - [ ] Add donation service method
+   - [ ] Fix donation link
+ - [ ] Show dynamic donations
+ - [ ] Show donations button or already donating buttons conditionally 
+### Delete animal
+ - [x] Fix navigation link in details
+ - [x] Add delete action
+ - [x] Add delete method in animal service
+ 
+### Edit animal
+ - [x] Fix navigation link in details
+ - [x] Add get edit action
+ - [x] Show empty edit page
+ - [x] Populate edit form with animal data
+ - [x] Add post edit action
+ - [x] Add edit method in animal service
+ - [x] Add error handling 
+### Donations
+ - [ ] Fix navigation link
+ - [ ] Show static donations page
+ - [ ] Show dynamic user information
+ - [ ] Show created animals
+ - [ ] Show donated animals
+
+## Validation and error handling

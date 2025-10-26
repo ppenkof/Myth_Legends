@@ -15,6 +15,12 @@ export function getLatest(){
     .limit(3).select({name: true, origin: true, imageUrl: true});
 }
 
+export function getLatestReport(){
+    return Myth.find()
+    .sort({createdAt: -1}) // if timestaps:true in model, you can sort by createdAt: -1: .sort({createdAt: -1})
+    .limit(3).select({name: true, origin: true, imageUrl: true});
+}
+
 export function create(mythData, userId) {
     return Myth.create({
         ...mythData, 

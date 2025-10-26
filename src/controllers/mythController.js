@@ -103,13 +103,19 @@ mythController.get('/:mythId/delete', isAuth, async (req, res) => {
 });
 
 //report
-// mythController.get('/:mythId/report', isAuth, async (req, res) => {
-//     const  mythId = req.params.mythId;
-//     const userId = req.user._id;
+mythController.get('/myth/report', async (req, res) => {
+    const mythId = req.params.mythId;
+    const userId = req.user._id;
 
-//     await  mythService.report( mythId, userId);
-//     res.redirect(`/myths/${ mythId}/details`);
-// });
+    const myth = await mythService.getLatestReport();
+    const isOwner = myth.owner.equals(userId);
+  
+    // const likedList = myth.likedList.map(d=>d.email).join(', ');
+    // const islikedList = myth.likedList.some(d=>d.equals(userId));
+
+    res.render('myths/details', { myth, isOwner});//, likedList, islikedList });
+    res.json({});
+});
 
 
 export default mythController;
